@@ -6,5 +6,122 @@
   },
   "newProjectRoot": "projects",
   "projects": {
+    "calculation-generator": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/calculation-generator",
+      "sourceRoot": "projects/calculation-generator/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/calculation-generator",
+            "index": "projects/calculation-generator/src/index.html",
+            "browser": "projects/calculation-generator/src/main.ts",
+            "polyfills": ["zone.js"],
+            "tsConfig": "projects/calculation-generator/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/calculation-generator/public"
+              }
+            ],
+            "styles": ["projects/calculation-generator/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "baseHref": "https://blackxes.dev/tools/",
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kB",
+                  "maximumError": "4kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "calculation-generator:build:production"
+            },
+            "development": {
+              "buildTarget": "calculation-generator:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": ["zone.js", "zone.js/testing"],
+            "tsConfig": "projects/calculation-generator/tsconfig.spec.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/calculation-generator/public"
+              }
+            ],
+            "styles": ["projects/calculation-generator/src/styles.scss"],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "@blackxes/angular-shared-ui": {
+      "projectType": "library",
+      "root": "projects/blackxes/angular-shared-ui",
+      "sourceRoot": "projects/blackxes/angular-shared-ui/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/blackxes/angular-shared-ui/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/blackxes/angular-shared-ui/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/blackxes/angular-shared-ui/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/blackxes/angular-shared-ui/tsconfig.spec.json",
+            "polyfills": ["zone.js", "zone.js/testing"]
+          }
+        }
+      }
+    }
   }
 }
