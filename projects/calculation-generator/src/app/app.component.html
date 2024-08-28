@@ -1,11 +1,11 @@
-<p>Generate some equations</p>
-
+<div class="grid place-items-center w-full min-h-screen">
 @if (equationService.equations().length) {
   @for(equation of equationService.equations(); track $index) {
     <div class="flex gap-2">
     @for(segment of equation.segments; track $index) {
       <p>{{ segment.value }}</p>
     }
+      <p>=</p>
     </div>
   }
 }
@@ -22,3 +22,6 @@
 >
   Generate
 </button>
+
+
+</div>

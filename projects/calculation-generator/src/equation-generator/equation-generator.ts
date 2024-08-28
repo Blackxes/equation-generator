@@ -7,7 +7,7 @@ import type { IEquationGenerationOptions } from './equation-generator.types';
 
 export const EquationGenerationDefaultOptions: IEquationGenerationOptions = {
   equationsCount: 20,
-  valueRange: { min: -100, max: 100 },
+  valueRange: { min: 0, max: 999 },
   signOptions: {
     '+': {
       probability: 1,
@@ -15,14 +15,14 @@ export const EquationGenerationDefaultOptions: IEquationGenerationOptions = {
     },
     '-': {
       probability: 1,
-      value: '-',
+      value: "-",
     },
     '*': {
-      probability: 1,
+      probability: 0.2,
       value: '*',
     },
     '/': {
-      probability: 1,
+      probability: 0.2,
       value: '/',
     },
   },

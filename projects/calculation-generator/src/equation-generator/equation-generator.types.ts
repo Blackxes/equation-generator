@@ -5,20 +5,24 @@
 
 export interface IEquation {
   segments: IEquationSegment[];
+  solution: number;
 }
 
-export interface IEquationSegment {
-  type: 'number' | 'sign';
+export interface IEquationSegment<TSignType = 'number' | 'sign'> {
+  type: TSignType;
   value: string | number;
+  mapper?: () => TSignType
 }
 
 export interface IEquationGenerationOptions {
   equationsCount: number;
   valueRange: { min: number; max: number };
-  signOptions: Record<IEquationSignType, IEquationSignOptions>;
+  signOptions: {
+    [K in IEquationSignType]: IEquationSignOptions<K>
+  }
 }
 
-export const IEquationSignTypes = ['+', '-', '*', '/'];
+export const IEquationSignTypes = ['+', '-', '*', '/'] as const;
 export type IEquationSignType = (typeof IEquationSignTypes)[number];
 // export type IEquationGroup = "(|)";
 

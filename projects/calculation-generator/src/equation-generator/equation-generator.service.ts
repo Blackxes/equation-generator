@@ -40,7 +40,7 @@ export class EquationGeneratorService {
 
       // First segment
       segments.push({
-        type: 'number',
+        type: "number",
         value: getRandom(_options.valueRange.min, _options.valueRange.max),
       });
 
@@ -54,7 +54,7 @@ export class EquationGeneratorService {
         );
         const signOption = normalizedSignOptionsAsArray[randomSignIndex];
         const doSelect =
-          Math.random() * normalizedSignOptionsAsArray.length >
+          Math.random() * normalizedSignOptionsAsArray.length <
           signOption.probability;
 
         if (doSelect) {
@@ -72,8 +72,11 @@ export class EquationGeneratorService {
         value: getRandom(_options.valueRange.min, _options.valueRange.max),
       });
 
+      const solution = (0, eval)(segments.map(v => v.value).join(" "));
+
       equations.push({
         segments,
+        solution
       });
     }
 
