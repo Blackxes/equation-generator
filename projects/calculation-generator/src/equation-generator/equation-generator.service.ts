@@ -3,17 +3,17 @@
  * @Email blackxes.dev@gmail.com
  */
 
-import { Injectable, signal } from '@angular/core';
-import { getRandom } from '../utility/utility';
-import { EquationGenerationDefaultOptions } from './equation-generator';
+import { Injectable, signal } from "@angular/core";
+import { getRandom } from "../utility/utility";
+import { EquationGenerationDefaultOptions } from "./equation-generator";
 import type {
   IEquation,
   IEquationGenerationOptions,
   IEquationSegment,
-} from './equation-generator.types';
+} from "./equation-generator.types";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class EquationGeneratorService {
   public readonly equations = signal<IEquation[]>([]);
@@ -26,10 +26,10 @@ export class EquationGeneratorService {
     const probabilitySum =
       Object.values(_options.signOptions).reduce(
         (s, v) => (s += v.probability),
-        0
+        0,
       ) / Object.values(_options.signOptions).length;
     const normalizedSignOptionsAsArray = Object.values(
-      _options.signOptions
+      _options.signOptions,
     ).map((v) => ({
       ...v,
       probability: v.probability / probabilitySum,
@@ -50,7 +50,7 @@ export class EquationGeneratorService {
 
         const randomSignIndex = getRandom(
           0,
-          normalizedSignOptionsAsArray.length
+          normalizedSignOptionsAsArray.length,
         );
         const signOption = normalizedSignOptionsAsArray[randomSignIndex];
         const doSelect =
@@ -59,7 +59,7 @@ export class EquationGeneratorService {
 
         if (doSelect) {
           segments.push({
-            type: 'sign',
+            type: "sign",
             value: signOption.value,
           });
           break;
@@ -68,15 +68,15 @@ export class EquationGeneratorService {
 
       // Second segment
       segments.push({
-        type: 'number',
+        type: "number",
         value: getRandom(_options.valueRange.min, _options.valueRange.max),
       });
 
-      const solution = (0, eval)(segments.map(v => v.value).join(" "));
+      const solution = (0, eval)(segments.map((v) => v.value).join(" "));
 
       equations.push({
         segments,
-        solution
+        solution,
       });
     }
 

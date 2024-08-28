@@ -1,12 +1,10 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'lib-button',
+  selector: "lib-button",
   standalone: true,
   imports: [],
-  templateUrl: './button.component.html',
-  styleUrl: './button.component.css'
+  templateUrl: "./button.component.html",
+  styleUrl: "./button.component.css",
 })
-export class ButtonComponent {
-
-}
+export class ButtonComponent {}

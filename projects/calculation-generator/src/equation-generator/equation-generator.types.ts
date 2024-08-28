@@ -8,21 +8,21 @@ export interface IEquation {
   solution: number;
 }
 
-export interface IEquationSegment<TSignType = 'number' | 'sign'> {
+export interface IEquationSegment<TSignType = "number" | "sign"> {
   type: TSignType;
   value: string | number;
-  mapper?: () => TSignType
+  mapper?: () => TSignType;
 }
 
 export interface IEquationGenerationOptions {
   equationsCount: number;
   valueRange: { min: number; max: number };
   signOptions: {
-    [K in IEquationSignType]: IEquationSignOptions<K>
-  }
+    [K in IEquationSignType]: IEquationSignOptions<K>;
+  };
 }
 
-export const IEquationSignTypes = ['+', '-', '*', '/'] as const;
+export const IEquationSignTypes = ["+", "-", "*", "/"] as const;
 export type IEquationSignType = (typeof IEquationSignTypes)[number];
 // export type IEquationGroup = "(|)";
 
