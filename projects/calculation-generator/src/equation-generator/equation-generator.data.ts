@@ -5,9 +5,11 @@
 
 import type { IEquationGenerationOptions } from "./equation-generator.types";
 
+export const IEquationSignTypes = ["+", "-", "*", "/"] as const;
+
 export const EquationGenerationDefaultOptions: IEquationGenerationOptions = {
   equationsCount: 20,
-  valueRange: { min: 0, max: 999 },
+  valueRange: { min: 10, max: 99 },
   signOptions: {
     "+": {
       probability: 1,

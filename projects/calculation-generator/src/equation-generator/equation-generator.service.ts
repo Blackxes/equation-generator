@@ -5,7 +5,7 @@
 
 import { Injectable, signal } from "@angular/core";
 import { getRandom } from "../utility/utility";
-import { EquationGenerationDefaultOptions } from "./equation-generator";
+import { EquationGenerationDefaultOptions } from "./equation-generator.data";
 import type {
   IEquation,
   IEquationGenerationOptions,
@@ -24,13 +24,9 @@ export class EquationGeneratorService {
     const _options = { ...EquationGenerationDefaultOptions, ...options };
     const equations: IEquation[] = [];
     const probabilitySum =
-      Object.values(_options.signOptions).reduce(
-        (s, v) => (s += v.probability),
-        0,
-      ) / Object.values(_options.signOptions).length;
-    const normalizedSignOptionsAsArray = Object.values(
-      _options.signOptions,
-    ).map((v) => ({
+      Object.values(_options.signOptions).reduce((s, v) => (s += v.probability), 0) /
+      Object.values(_options.signOptions).length;
+    const normalizedSignOptionsAsArray = Object.values(_options.signOptions).map((v) => ({
       ...v,
       probability: v.probability / probabilitySum,
     }));
@@ -40,26 +36,22 @@ export class EquationGeneratorService {
 
       // First segment
       segments.push({
-        type: "number",
-        value: getRandom(_options.valueRange.min, _options.valueRange.max),
+        type: "value",
+        valueType: "number",
+        value: +getRandom(_options.valueRange.min, _options.valueRange.max),
       });
 
       // Sign
       while (true) {
-        // debugger;
-
-        const randomSignIndex = getRandom(
-          0,
-          normalizedSignOptionsAsArray.length,
-        );
+        const randomSignIndex = getRandom(0, normalizedSignOptionsAsArray.length);
         const signOption = normalizedSignOptionsAsArray[randomSignIndex];
         const doSelect =
-          Math.random() * normalizedSignOptionsAsArray.length <
-          signOption.probability;
+          Math.random() * normalizedSignOptionsAsArray.length < signOption.probability;
 
         if (doSelect) {
           segments.push({
-            type: "sign",
+            type: "value",
+            valueType: "operator",
             value: signOption.value,
           });
           break;
@@ -68,15 +60,15 @@ export class EquationGeneratorService {
 
       // Second segment
       segments.push({
-        type: "number",
+        type: "value",
+        valueType: "number",
         value: getRandom(_options.valueRange.min, _options.valueRange.max),
       });
 
-      const solution = (0, eval)(segments.map((v) => v.value).join(" "));
-
       equations.push({
         segments,
-        solution,
+        getSolution: () => this.solveEquation(segments),
+        isRoot: true,
       });
     }
 
@@ -84,5 +76,18 @@ export class EquationGeneratorService {
     this.isGenerating.set(false);
 
     return this.equations;
+  }
+
+  public solveEquation(segments: IEquationSegment[]) {
+    return (0, eval)(
+      segments
+        .map((v) => {
+          if (v.type == "equation") {
+            return v.value.getSolution();
+          }
+          return v.value;
+        })
+        .join(" "),
+    );
   }
 }

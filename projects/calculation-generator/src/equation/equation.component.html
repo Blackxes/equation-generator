@@ -1,0 +1,8 @@
+<div class="equation flex gap-2">
+  @for (segment of equation().segments; track $index) {
+    <div class="flex-1">
+      <p>{{ segment.value }}</p>
+    </div>
+  }
+  <p>=</p>
+</div>
