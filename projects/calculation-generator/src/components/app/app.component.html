@@ -1,8 +1,6 @@
-<div class="flex flex-col w-full min-h-screen">
+<div class="flex flex-col gap-2 w-full min-h-screen">
   @if (equationService.equations().length) {
-    @for (equation of this.equationService.equations(); track $index) {
-      <div class="app-equation flex gap-2" [equation]="equation"></div>
-    }
+    <app-equation [equations]="this.equationService.equations()" />
   } @else if (equationService.isGenerating()) {
     <p>Is generating ...</p>
   } @else {
@@ -12,6 +10,6 @@
     class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
     (click)="this.generateEquations()"
   >
-    Generate
+    Gleichungen generieren
   </button>
 </div>

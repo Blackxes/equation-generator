@@ -4,7 +4,7 @@
  */
 
 import { Injectable, signal } from "@angular/core";
-import { getRandom } from "../utility/utility";
+import { getRandom, getRandomId } from "../../utility/utility";
 import { EquationGenerationDefaultOptions } from "./equation-generator.data";
 import type {
   IEquation,
@@ -15,7 +15,7 @@ import type {
 @Injectable({
   providedIn: "root",
 })
-export class EquationGeneratorService {
+export class EquationGenerationService {
   public readonly equations = signal<IEquation[]>([]);
   public readonly isGenerating = signal<boolean>(false);
 
@@ -36,6 +36,7 @@ export class EquationGeneratorService {
 
       // First segment
       segments.push({
+        id: getRandomId(),
         type: "value",
         valueType: "number",
         value: +getRandom(_options.valueRange.min, _options.valueRange.max),
@@ -50,6 +51,7 @@ export class EquationGeneratorService {
 
         if (doSelect) {
           segments.push({
+            id: getRandomId(),
             type: "value",
             valueType: "operator",
             value: signOption.value,
@@ -60,12 +62,14 @@ export class EquationGeneratorService {
 
       // Second segment
       segments.push({
+        id: getRandomId(),
         type: "value",
         valueType: "number",
         value: getRandom(_options.valueRange.min, _options.valueRange.max),
       });
 
       equations.push({
+        id: getRandomId(),
         segments,
         getSolution: () => this.solveEquation(segments),
         isRoot: true,

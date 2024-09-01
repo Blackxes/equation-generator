@@ -1,0 +1,21 @@
+<div class="">
+  @if (!this.equations.length) {
+    <button (click)="this.equationService.generate()">Gleichungen generieren lassen -></button>
+  } @else {
+    @for (let equation of this.equationService.equations(); track: $index) {
+      <div class="app-equation flex gap-6" [equation]="equation"></div>
+    }
+  }
+</div>
+
+<div class="equation p-4 flex gap-6 border rounded">
+  @for (segment of equation().segments; track $index) {
+    <div class="flex-1">
+      <p>{{ segment.value }}</p>
+    </div>
+  }
+  <div class="flex-1">
+    <p>=</p>
+  </div>
+  <div class="flex-1"></div>
+</div>

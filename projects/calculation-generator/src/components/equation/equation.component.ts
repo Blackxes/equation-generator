@@ -3,19 +3,18 @@
  * @Email blackxes.dev@gmail.com
  */
 
-import { JsonPipe } from "@angular/common";
 import { Component, input } from "@angular/core";
+import { EquationGenerationService } from "../equation-generator/equation-generator.service";
 import { IEquation } from "../equation-generator/equation-generator.types";
 
 @Component({
   selector: ".app-equation",
   standalone: true,
-  imports: [JsonPipe],
   templateUrl: "equation.component.html",
   styleUrl: "equation.component.scss",
 })
 export class EquationComponent {
-  public equation = input.required<IEquation>();
+  public equations = input.required<IEquation[]>();
 
-  constructor() {}
+  constructor(public equationService: EquationGenerationService) {}
 }

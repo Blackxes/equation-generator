@@ -10,6 +10,7 @@ import { IEquationSignTypes } from "./equation-generator.data";
  */
 
 export interface IEquation {
+  id: string;
   segments: IEquationSegment[];
   getSolution: () => number;
   /** Defines whether this is ACTUAL equation or a child equation within */
@@ -34,7 +35,9 @@ export interface IEquationValueSegment {
   valueType: TSegmentValueType;
 }
 
-export type IEquationSegment = IEquationFunctionSegment | IEquationValueSegment;
+export type IEquationSegment = {
+  id: string;
+} & (IEquationFunctionSegment | IEquationValueSegment);
 
 /**
  * Equation generation types

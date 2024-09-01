@@ -1,7 +1,7 @@
 import { Component, OnInit, signal } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
 import { ButtonComponent } from "@blackxes/angular-shared-ui";
-import { EquationGeneratorService } from "../equation-generator/equation-generator.service";
+import { EquationGenerationService } from "../equation-generator/equation-generator.service";
 import { EquationComponent } from "../equation/equation.component";
 
 @Component({
@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   public title = "calculation-generator";
   public isGenerating = signal<boolean>(false);
 
-  constructor(public equationService: EquationGeneratorService) {}
+  constructor(public equationService: EquationGenerationService) {}
 
   ngOnInit() {
     this.generateEquations();
