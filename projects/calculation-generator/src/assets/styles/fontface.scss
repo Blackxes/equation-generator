@@ -1,0 +1,359 @@
+@font-face {
+  font-family: "Noto Sans Mono Condensed";
+  src:
+    local("Noto Sans Mono Condensed Bold"),
+    local("NotoSansMonoCondensed-Bold"),
+    url("../fonts/noto-sans-mono/NotoSansMonoCondensed-Bold.woff2") format("woff2"),
+    url("../fonts/noto-sans-mono/NotoSansMonoCondensed-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Mono Condensed";
+  src:
+    local("Noto Sans Mono Condensed ExtraLight"),
+    local("NotoSansMonoCondensed-ExtraLight"),
+    url("../fonts/noto-sans-mono/NotoSansMonoCondensed-ExtraLight.woff2") format("woff2"),
+    url("../fonts/noto-sans-mono/NotoSansMonoCondensed-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Mono Condensed";
+  src:
+    local("Noto Sans Mono Condensed Black"),
+    local("NotoSansMonoCondensed-Black"),
+    url("../fonts/noto-sans-mono/NotoSansMonoCondensed-Black.woff2") format("woff2"),
+    url("../fonts/noto-sans-mono/NotoSansMonoCondensed-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Mono Condensed";
+  src:
+    local("Noto Sans Mono Condensed ExtraBold"),
+    local("NotoSansMonoCondensed-ExtraBold"),
+    url("../fonts/noto-sans-mono/NotoSansMonoCondensed-ExtraBold.woff2") format("woff2"),
+    url("../fonts/noto-sans-mono/NotoSansMonoCondensed-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Mono Condensed";
+  src:
+    local("Noto Sans Mono Condensed Regular"),
+    local("NotoSansMonoCondensed-Regular"),
+    url("../fonts/noto-sans-mono/NotoSansMonoCondensed-Regular.woff2") format("woff2"),
+    url("../fonts/noto-sans-mono/NotoSansMonoCondensed-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Mono Condensed";
+  src:
+    local("Noto Sans Mono Condensed Light"),
+    local("NotoSansMonoCondensed-Light"),
+    url("../fonts/noto-sans-mono/NotoSansMonoCondensed-Light.woff2") format("woff2"),
+    url("../fonts/noto-sans-mono/NotoSansMonoCondensed-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Mono Condensed";
+  src:
+    local("Noto Sans Mono Condensed Medium"),
+    local("NotoSansMonoCondensed-Medium"),
+    url("../fonts/noto-sans-mono/NotoSansMonoCondensed-Medium.woff2") format("woff2"),
+    url("../fonts/noto-sans-mono/NotoSansMonoCondensed-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Mono Condensed";
+  src:
+    local("Noto Sans Mono Condensed Thin"),
+    local("NotoSansMonoCondensed-Thin"),
+    url("../fonts/noto-sans-mono/NotoSansMonoCondensed-Thin.woff2") format("woff2"),
+    url("../fonts/noto-sans-mono/NotoSansMonoCondensed-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Mono ExtraCondensed";
+  src:
+    local("Noto Sans Mono ExtraCondensed Black"),
+    local("NotoSansMonoExtraCondensed-Black"),
+    url("../fonts/noto-sans-mono/NotoSansMonoExtraCondensed-Black.woff2") format("woff2"),
+    url("../fonts/noto-sans-mono/NotoSansMonoExtraCondensed-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Mono Condensed";
+  src:
+    local("Noto Sans Mono Condensed SemiBold"),
+    local("NotoSansMonoCondensed-SemiBold"),
+    url("../fonts/noto-sans-mono/NotoSansMonoCondensed-SemiBold.woff2") format("woff2"),
+    url("../fonts/noto-sans-mono/NotoSansMonoCondensed-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Mono ExtraCondensed";
+  src:
+    local("Noto Sans Mono ExtraCondensed Bold"),
+    local("NotoSansMonoExtraCondensed-Bold"),
+    url("../fonts/noto-sans-mono/NotoSansMonoExtraCondensed-Bold.woff2") format("woff2"),
+    url("../fonts/noto-sans-mono/NotoSansMonoExtraCondensed-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Mono ExtraCondensed";
+  src:
+    local("Noto Sans Mono ExtraCondensed Light"),
+    local("NotoSansMonoExtraCondensed-Light"),
+    url("../fonts/noto-sans-mono/NotoSansMonoExtraCondensed-Light.woff2") format("woff2"),
+    url("../fonts/noto-sans-mono/NotoSansMonoExtraCondensed-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Mono ExtraCondensed";
+  src:
+    local("Noto Sans Mono ExtraCondensed ExtraLight"),
+    local("NotoSansMonoExtraCondensed-ExtraLight"),
+    url("../fonts/noto-sans-mono/NotoSansMonoExtraCondensed-ExtraLight.woff2") format("woff2"),
+    url("../fonts/noto-sans-mono/NotoSansMonoExtraCondensed-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Mono ExtraCondensed";
+  src:
+    local("Noto Sans Mono ExtraCondensed ExtraBold"),
+    local("NotoSansMonoExtraCondensed-ExtraBold"),
+    url("../fonts/noto-sans-mono/NotoSansMonoExtraCondensed-ExtraBold.woff2") format("woff2"),
+    url("../fonts/noto-sans-mono/NotoSansMonoExtraCondensed-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Mono ExtraCondensed";
+  src:
+    local("Noto Sans Mono ExtraCondensed SemiBold"),
+    local("NotoSansMonoExtraCondensed-SemiBold"),
+    url("../fonts/noto-sans-mono/NotoSansMonoExtraCondensed-SemiBold.woff2") format("woff2"),
+    url("../fonts/noto-sans-mono/NotoSansMonoExtraCondensed-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Mono ExtraCondensed";
+  src:
+    local("Noto Sans Mono ExtraCondensed Medium"),
+    local("NotoSansMonoExtraCondensed-Medium"),
+    url("../fonts/noto-sans-mono/NotoSansMonoExtraCondensed-Medium.woff2") format("woff2"),
+    url("../fonts/noto-sans-mono/NotoSansMonoExtraCondensed-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Mono ExtraCondensed";
+  src:
+    local("Noto Sans Mono ExtraCondensed Regular"),
+    local("NotoSansMonoExtraCondensed-Regular"),
+    url("../fonts/noto-sans-mono/NotoSansMonoExtraCondensed-Regular.woff2") format("woff2"),
+    url("../fonts/noto-sans-mono/NotoSansMonoExtraCondensed-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Mono SemiCondensed";
+  src:
+    local("Noto Sans Mono SemiCondensed Bold"),
+    local("NotoSansMonoSemiCondensed-Bold"),
+    url("../fonts/noto-sans-mono/NotoSansMonoSemiCondensed-Bold.woff2") format("woff2"),
+    url("../fonts/noto-sans-mono/NotoSansMonoSemiCondensed-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Mono ExtraCondensed";
+  src:
+    local("Noto Sans Mono ExtraCondensed Thin"),
+    local("NotoSansMonoExtraCondensed-Thin"),
+    url("../fonts/noto-sans-mono/NotoSansMonoExtraCondensed-Thin.woff2") format("woff2"),
+    url("../fonts/noto-sans-mono/NotoSansMonoExtraCondensed-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Mono SemiCondensed";
+  src:
+    local("Noto Sans Mono SemiCondensed ExtraBold"),
+    local("NotoSansMonoSemiCondensed-ExtraBold"),
+    url("../fonts/noto-sans-mono/NotoSansMonoSemiCondensed-ExtraBold.woff2") format("woff2"),
+    url("../fonts/noto-sans-mono/NotoSansMonoSemiCondensed-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Mono SemiCondensed";
+  src:
+    local("Noto Sans Mono SemiCondensed Black"),
+    local("NotoSansMonoSemiCondensed-Black"),
+    url("../fonts/noto-sans-mono/NotoSansMonoSemiCondensed-Black.woff2") format("woff2"),
+    url("../fonts/noto-sans-mono/NotoSansMonoSemiCondensed-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Mono SemiCondensed";
+  src:
+    local("Noto Sans Mono SemiCondensed ExtraLight"),
+    local("NotoSansMonoSemiCondensed-ExtraLight"),
+    url("../fonts/noto-sans-mono/NotoSansMonoSemiCondensed-ExtraLight.woff2") format("woff2"),
+    url("../fonts/noto-sans-mono/NotoSansMonoSemiCondensed-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Mono SemiCondensed";
+  src:
+    local("Noto Sans Mono SemiCondensed Medium"),
+    local("NotoSansMonoSemiCondensed-Medium"),
+    url("../fonts/noto-sans-mono/NotoSansMonoSemiCondensed-Medium.woff2") format("woff2"),
+    url("../fonts/noto-sans-mono/NotoSansMonoSemiCondensed-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Mono SemiCondensed";
+  src:
+    local("Noto Sans Mono SemiCondensed Light"),
+    local("NotoSansMonoSemiCondensed-Light"),
+    url("../fonts/noto-sans-mono/NotoSansMonoSemiCondensed-Light.woff2") format("woff2"),
+    url("../fonts/noto-sans-mono/NotoSansMonoSemiCondensed-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Mono SemiCondensed";
+  src:
+    local("Noto Sans Mono SemiCondensed Thin"),
+    local("NotoSansMonoSemiCondensed-Thin"),
+    url("../fonts/noto-sans-mono/NotoSansMonoSemiCondensed-Thin.woff2") format("woff2"),
+    url("../fonts/noto-sans-mono/NotoSansMonoSemiCondensed-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Mono SemiCondensed";
+  src:
+    local("Noto Sans Mono SemiCondensed Regular"),
+    local("NotoSansMonoSemiCondensed-Regular"),
+    url("../fonts/noto-sans-mono/NotoSansMonoSemiCondensed-Regular.woff2") format("woff2"),
+    url("../fonts/noto-sans-mono/NotoSansMonoSemiCondensed-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Mono SemiCondensed";
+  src:
+    local("Noto Sans Mono SemiCondensed SemiBold"),
+    local("NotoSansMonoSemiCondensed-SemiBold"),
+    url("../fonts/noto-sans-mono/NotoSansMonoSemiCondensed-SemiBold.woff2") format("woff2"),
+    url("../fonts/noto-sans-mono/NotoSansMonoSemiCondensed-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Mono";
+  src:
+    local("Noto Sans Mono Bold"),
+    local("NotoSansMono-Bold"),
+    url("../fonts/noto-sans-mono/NotoSansMono-Bold.woff2") format("woff2"),
+    url("../fonts/noto-sans-mono/NotoSansMono-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Mono";
+  src:
+    local("Noto Sans Mono ExtraBold"),
+    local("NotoSansMono-ExtraBold"),
+    url("../fonts/noto-sans-mono/NotoSansMono-ExtraBold.woff2") format("woff2"),
+    url("../fonts/noto-sans-mono/NotoSansMono-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Mono";
+  src:
+    local("Noto Sans Mono Black"),
+    local("NotoSansMono-Black"),
+    url("../fonts/noto-sans-mono/NotoSansMono-Black.woff2") format("woff2"),
+    url("../fonts/noto-sans-mono/NotoSansMono-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
