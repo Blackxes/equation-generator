@@ -32,7 +32,10 @@
                 "input": "projects/calculation-generator/public"
               }
             ],
-            "styles": ["projects/calculation-generator/src/styles.scss"],
+            "styles": [
+              "projects/calculation-generator/src/assets/styles/global-styles.scss",
+              "projects/calculation-generator/src/assets/styles/fontface.scss"
+            ],
             "scripts": []
           },
           "configurations": {
